@@ -1,0 +1,8 @@
+<div *ngFor="let product of getProducts()">
+  <a
+    [routerLink]="['/product/product1', product.id]"
+    routerLinkActive="active"
+    >{{ product.name }}</a
+  >
+</div>
+<router-outlet></router-outlet>
