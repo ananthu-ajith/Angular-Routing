@@ -1,0 +1,31 @@
+<!-- <h1>My Profile</h1>
+<h3>{{UserProfile.name}}</h3>
+
+<router-outlet></router-outlet> -->
+
+
+<!-- profile.component.html -->
+<main>
+<h1>My Profile</h1>
+
+<h3>{{ UserProfile.name }}</h3>
+
+
+  <p><strong>Email:</strong> {{ UserProfile.contactInformation.email }}</p>
+  <p><strong>Mobile:</strong> {{ UserProfile.contactInformation.mobile }}</p>
+
+
+<p><strong>Bio:</strong><span [innerText]="UserProfile.bio"></span></p>
+<p><strong>Location:</strong> {{ UserProfile.location }}</p>
+<p><strong>Website:</strong> <a [class]="atag" href="#" target="_blank">{{ UserProfile.website }}</a></p>
+<p><strong>Employment:</strong> {{ UserProfile.employment }}</p>
+<p><strong>Education:</strong> {{ UserProfile.education }}</p>
+
+<p class="interests"><strong>Interests:</strong> {{UserProfile.interests}}</p>
+<!-- <ul class="interests">
+  <li *ngFor="let interest of UserProfile.interests">{{ interest }}</li>
+</ul> -->
+
+
+<router-outlet></router-outlet>
+</main>
